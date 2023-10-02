@@ -19,7 +19,7 @@ const Bookings = ({ movies }) => {
   };
 
   const handleConfirmCancel = async () => {
-    const response = await fetch(`http://localhost:4000/api/bookings/${selectedBookingId}`, {
+    const response = await fetch(`https://movies-pro-1qpo.onrender.com/api/bookings/${selectedBookingId}`, {
       method: 'DELETE',
       headers: {
         'Authorization': `Bearer ${user.token}`
@@ -37,7 +37,7 @@ const Bookings = ({ movies }) => {
       if (!user)
         return;
 
-      const response = await fetch('http://localhost:4000/api/bookings/', {
+      const response = await fetch('https://movies-pro-1qpo.onrender.com/api/bookings/', {
         headers: {
           'Authorization': `Bearer ${user.token}`
         }
