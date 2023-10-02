@@ -10,13 +10,11 @@ const TicketForm = ({ name }) => {
   const [tnumber, setTnumber] = useState(0);
   const [time, setTime] = useState("11 AM");
   const [isbooked, setIsbooked] = useState(false);
-  const [booking_id, setBooking_id] = useState(0);
   const [isModalOpen, setIsModalOpen] = useState(false);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    setBooking_id(Math.floor(Math.random() * 100));
     // Create an object with the form data
     const formData = {
       mname: name,
@@ -25,7 +23,7 @@ const TicketForm = ({ name }) => {
       time: time,
     };
 
-    const response = await fetch("http://localhost:4000/api/bookings/", {
+    const response = await fetch("https://movies-pro-1qpo.onrender.com/api/bookings/", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
