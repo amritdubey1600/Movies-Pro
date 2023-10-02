@@ -1,0 +1,211 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;500;600&display=swap');
+
+:root {
+  --error: #e7195a;
+}
+
+* {
+  margin: 0;
+  font-family: "Nunito";
+  font-style: "Roboto";
+  color: #fff;
+  text-decoration: none;
+}
+body{
+  background-color: #61677A;
+  height: 100vh;
+}
+.Home h1{
+  margin: 1.25%;
+}
+/* navbar */
+.navbar {
+  background-color: #272829;
+  padding: 15px;
+}
+.navbar h1 {
+  background-color: #272829;
+  color: #fc3;
+}
+
+/* movie-homepage */
+
+.moviecomponent {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem; /* Add spacing between movie cards */
+  justify-content: center;
+  align-items: center;
+}
+
+.movie-card img{
+  height: 350px;
+  width: 250px;
+}
+
+.movie-card {
+  height: 350px;
+  box-shadow: 5px 5px 20px black;
+  border-radius: 2.5%;
+}
+
+.movie-card .intro{
+  height: 295px;
+  width: 250px;
+  padding: 4px;
+  box-sizing: border-box;
+  background: rgb(27,27,27,0.5);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  transition: ease-in 0.4s;
+  position: absolute;
+  transform: translate(0,-120%);
+}
+
+.movie-card .intro:hover{
+  opacity: 1;
+}
+
+.movie-card h3 {
+  margin: 6px;
+  font-size: 24px;
+}
+
+.movie-card p{
+  font-size: 20px;
+  margin: 20px;
+}
+
+.movie-card .rating {
+  font-weight: bold;
+}
+
+.movie-card .genres span {
+  margin-right: 4px;
+  padding: 2px 6px;
+  background-color: #111;
+  border-radius: 4px;
+}
+
+.movie-card button, .moviedetails button {
+  font-size: 16px;
+  font-weight: bolder;
+  background-color: #fc3;
+  color: #111;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+/* movie-details page */
+.moviedetails{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.25rem;
+}
+.moviedetails .image{
+  width: 25%;
+  margin: 2rem;
+}
+.moviedetails button{
+  margin-top: 1.25rem;
+}
+.moviedetails h2{
+  margin-bottom: 10px;
+  color: #fc3;
+}
+
+/* Tickets Form */
+.ticketform{
+  margin-top: 1rem;
+}
+.ticketform h2,h3{
+  color: #fc3;
+}
+.ticketform label{
+  text-align: left;
+  display: block;
+}
+.ticketform input,.ticketform select{
+  width: 60%;
+  padding: 6px 10px;
+  margin: 10px 0;
+  border: 1px solid #ddd;
+  box-sizing: border-box;
+  display: block;
+  color: #111;
+}
+.ticketform option{
+  color: #111;
+}
+/* auth forms */
+form.signup, form.login {
+  max-width: 380px;
+  margin: 40px auto;
+  padding: 20px;
+  background: #272829;
+  border-radius: 4px;
+}
+.login h2,.signup h2{
+  margin-bottom: 8px;
+  color: #fc3;
+}
+.login label,.signup label{
+  text-align: left;
+}
+.login input,.signup input{
+  width: 100%;
+  padding: 6px 10px;
+  margin: 10px 0;
+  border: 1px solid #ddd;
+  box-sizing: border-box;
+  display: block;
+  color: #111;
+}
+.login p{
+  margin: 8px 0;
+}
+div.error {
+  padding: 10px;
+  border: 1px solid var(--error);
+  color: var(--error);
+  border-radius: 4px;
+  margin: 20px 0;
+}
+input.error {
+  border: 1px solid var(--error);
+}
+
+/* Bookings */
+.booking-component{
+  background-color: #111;
+  max-width: 75%;
+  margin: 20px auto;
+  border-radius: 5px;
+  box-shadow: 3px 3px 7.5px rgb(50, 50, 50);
+}
+.booking-component h2{
+  color: #fc3;
+  margin-bottom: 10px;
+}
+.booking-component img{
+  width: 75%;
+  border-radius: 5px;
+}
+.booking-component footer{
+  position: relative;
+  bottom: -25px;
+}
+.booking-component .btn{
+  position: relative;
+  bottom: -80px;
+  left: -10px;
+}
+.booking-component span{
+  font-size: 0.95rem;
+}
